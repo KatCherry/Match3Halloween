@@ -29,6 +29,9 @@ namespace Match3
         private void Start()
         {
             Play();
+            m_PopUpLose.OnReset += Reset;
+            m_SceneController.OnNewData += ResetForNewScene;
+            m_PopUpWin.OnUpdateBoard += UpdateForNewScene;
         }
 
         private void SetScore(int score, int steps)
@@ -74,21 +77,23 @@ namespace Match3
             m_Board.OnGetScore += SetScore;
             m_Board.Start();
             m_Board.SetStepsCount(m_StepsCountForLevel);
-            m_PopUpLose.OnReset += Reset;
-            m_SceneController.OnNewData += ResetForNewScene;
+        }
+
+        private void UpdateForNewScene()
+        {
+            Play();
         }
 
         private void ResetForNewScene()
         {
             m_Board.Reset();
-            Time.timeScale = 1;
         }
 
         private void Reset()
         {
+            Debug.Log("3");
             m_Board.Reset();
             Play();
-            Time.timeScale = 1;
         }
 
         private void UpdateSettings()

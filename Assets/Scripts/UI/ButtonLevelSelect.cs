@@ -20,4 +20,9 @@ public class ButtonLevelSelect : MonoBehaviour
     {
         SceneManager.LoadScene("Level"+ m_LevelNumber);
     }
+
+    public int GetLevelNumber()
+    {
+        return m_LevelNumber;
+    }
 }

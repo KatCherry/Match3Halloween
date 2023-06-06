@@ -18,10 +18,16 @@ public class ChangeSceneController : MonoBehaviour
         SceneManager.LoadScene("StartScene");
     }
 
+    public void BackToLevelsGame()
+    {
+        SceneManager.LoadScene("Levels");
+        Time.timeScale = 1;
+        OnNewData?.Invoke();
+    }
+
     public void StartGame()
     {
         SceneManager.LoadScene("Levels");
-        OnNewData?.Invoke();
     }
 
     public void QuitGame()

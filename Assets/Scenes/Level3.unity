@@ -1985,7 +1985,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7693491029834793654, guid: 05d79dce7e555754faff59a88ab1cd46, type: 3}
         m_TargetAssemblyTypeName: ChangeSceneController, Assembly-CSharp
-        m_MethodName: StartGame
+        m_MethodName: BackToLevelsGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2087,7 +2087,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_RestartButton: {fileID: 527471751}
-  m_SelectLevelButton: {fileID: 528728677}
+  m_NextLevelButton: {fileID: 528728677}
+  m_NextLevelNumber: 0
 --- !u!114 &1708419785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2295,4 +2296,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_RestartButton: {fileID: 527471751}
-  m_SelectLevelButton: {fileID: 528728677}
+  m_NextLevelButton: {fileID: 528728677}
+  m_NextLevelNumber: 0
